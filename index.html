@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    
+    <div class="main-wrapper">
+        <!-- First screen -->
+        <div class="first-step" >
+            <div class="userLogo-wrapper">
+                <figure>
+                    <img src="logo.png" alt="" />
+                </figure>
+                <h2>Hello user!</h2>
+                <h5>Enter your name to continue the Quiz.</h5>
+                <div class="form-group">
+                    <input type="text" id="username" class="form-control" placeholder="Enter Your Name" />
+                    <a href="#" id="enterBtn">Enter</a>
+                </div>
+                <p>You'll have 10 seconds to answer each questions</p>
+            </div>
+            <!-- Questions Categories -->
+            <div class="selectCategory-wrapper" style="display: none;">
+                <h2>Select Category</h2>
+                <ul>
+                    <li value="9">General Knowledge</li>
+                    <li value="21">Sports</li>
+                    <li value="23">History</li>
+                    <li value="24">Politics</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Second screen -->
+        <div class="second-step text-center" style="display: none;">
+            <h4 id="selectCat"></h4>
+            <div class="scoreTime">
+                <div id="taskTime"></div>
+                <div class="score-wrap">Score: <span id="score">0</span></div>
+            </div>
+            <div id="question-wrapper"></div>
+            <div class="nextQuestionBtn btns-group">
+                <a href="#" id="backQues" class="btn btn-primary">Back Question</a>
+                <a href="#" id="nextQues" class="btn btn-primary">Next Question</a>
+                <a href="#" id="submitQues" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+
+        <!-- Third screen -->
+        <div class="third-step text-center" style="display: none;">
+            <h2>Quiz Result</h2>
+            <ul>
+                <li><span id="userName"></span> Your result is:</li>
+                <li>Total Time Taken : <span id="totalTime"></span> seconds</li>
+                <li>Total Question : <span id="totalQues">10</span></li>
+                <li>Attempt : <span id="attempt">0</span></li>
+                <li>Correct : <span id="correct">0</span></li>
+                <li>Wrong : <span id="wrong">0</span></li>
+                <li>Percentage : <span id="percentage"></span></li>
+            </ul>
+            <div class="btns-group">
+                <a href="#" class="btn btn-primary" id="startAgain">Start Again</a>
+                <a href="#" class="btn btn-primary" id="gotoHome">Go To Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="custom.js"></script>
+
+</body>
+</html>
